@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/hasselmann/ontologies/2019/10/test-restrictions#"
+     xml:base="http://www.semanticweb.org/hasselmann/ontologies/2019/10/test-restrictions"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/hasselmann/ontologies/2019/10/test-restrictions"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hasselmann/ontologies/2019/10/untitled-ontology-5#adds -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hasselmann/ontologies/2019/10/untitled-ontology-5#adds"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hasselmann/ontologies/2019/10/untitled-ontology-5#buys -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hasselmann/ontologies/2019/10/untitled-ontology-5#buys"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hasselmann/ontologies/2019/10/untitled-ontology-5#removes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hasselmann/ontologies/2019/10/untitled-ontology-5#removes">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+        <owl:inverseOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hasselmann/ontologies/2019/10/untitled-ontology-5#Admin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hasselmann/ontologies/2019/10/untitled-ontology-5#Admin">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hasselmann/ontologies/2019/10/untitled-ontology-5#adds"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hasselmann/ontologies/2019/10/untitled-ontology-5#User"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hasselmann/ontologies/2019/10/untitled-ontology-5#removes"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hasselmann/ontologies/2019/10/untitled-ontology-5#User"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hasselmann/ontologies/2019/10/untitled-ontology-5#Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hasselmann/ontologies/2019/10/untitled-ontology-5#Product"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hasselmann/ontologies/2019/10/untitled-ontology-5#ProductManager -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hasselmann/ontologies/2019/10/untitled-ontology-5#ProductManager">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hasselmann/ontologies/2019/10/untitled-ontology-5#adds"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hasselmann/ontologies/2019/10/untitled-ontology-5#Product"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hasselmann/ontologies/2019/10/untitled-ontology-5#removes"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hasselmann/ontologies/2019/10/untitled-ontology-5#Product"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hasselmann/ontologies/2019/10/untitled-ontology-5#User -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hasselmann/ontologies/2019/10/untitled-ontology-5#User">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hasselmann/ontologies/2019/10/untitled-ontology-5#buys"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hasselmann/ontologies/2019/10/untitled-ontology-5#Product"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
